@@ -1,0 +1,180 @@
+*{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+}
+main{
+    width: 100%;
+    height: 100vh;
+}
+
+@media (min-width:800px) and (max-width:1600px){
+    main #sec1{
+        width: 100%;
+        height: 8vh;
+        margin: 0;
+        background-color: rgba(10, 0, 0, 0.8);
+    }
+    main #sec2{
+        width: 100%;
+        height: 2vh;
+        background-color: red;
+    }
+    main .section_class{
+        width: 100%;
+        height: 90vh;
+        border: 1px solid;
+    }
+    main #sec3{
+        background-color: black;
+        position: absolute;
+        z-index: -1;
+    }
+    main #sec3 .image_id{
+        width: 40%;
+        height: 80vh;
+        margin: 5vh auto;
+        background-image: url("./6833.png_860.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        border-radius: 10px;
+    }
+    main #sec4{
+        background-color: rgba(0, 0, 0, 0.8);
+    }
+    main #sec4 #form_id{
+        width: 40%;
+        height: 80vh;
+        margin: 5vh auto;
+    }
+    main #sec4 #form_id form{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    main #sec4 #form_id form:hover{
+        box-shadow: 0px 0px 20px white;
+        border-radius: 10px;
+    }
+    main #sec4 #form_id form input{
+        width: 88%;
+        height: 8vh;
+        margin:4vh 0% ;
+        border: none;
+        background-color: rgba(0, 0, 0, 0.8);
+        color: white;
+        padding: 0 5px;
+        outline: none;
+    }
+    main #sec4 #form_id form input:hover{
+        border-top: 2px solid white ;
+        border-left: 2px solid white;
+        border-radius: 10px 10px 0px 10px;
+    }
+    input[type="text"],[type="email"],[type="number"],[type="password"],[type="submit"],[type="reset"]{
+        font-size: large;
+        font-weight: bolder;
+    }
+    input[type="number"]{
+        -moz-appearance: textfield;
+    }
+    main #sec4 #form_id form .input_field{
+        width: 41%;
+        height: 8vh;
+    }
+    main #sec4 #form_id form .btn_field{
+        width: 30%;
+        cursor: pointer;
+    }
+    main #sec4 #form_id form .btn_field:hover{
+        border: 1px solid white;
+        border-radius: 0px;
+    }
+}
+
+
+@media (min-width:300px) and (max-width:800px){
+    main #sec1{
+        width: 100%;
+        height: 6vh;
+        margin: 0;
+        background-color: rgba(10, 0, 0, 0.8);
+    }
+    main #sec2{
+        width: 100%;
+        height: 2vh;
+        background-color: red;
+    }
+    main .section_class{
+        width: 100%;
+        height: 92vh;
+        border: 1px solid;
+    }
+    main #sec3{
+        background-color: black;
+        position: absolute;
+        z-index: -1;
+    }
+    main #sec3 .image_id{
+        width: 90%;
+        height: 82vh;
+        margin: 5vh auto;
+        background-image: url("./6833.png_860.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        border-radius: 10px;
+    }
+    main #sec4{
+        background-color: rgba(0, 0, 0, 0.8);
+    }
+    main #sec4 #form_id{
+        width: 90%;
+        height: 82vh;
+        margin: 5vh auto;
+    }
+    main #sec4 #form_id form{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    main #sec4 #form_id form:hover{
+        box-shadow: 0px 0px 20px white;
+        border-radius: 10px;
+    }
+    main #sec4 #form_id form input{
+        width: 88%;
+        height: 8vh;
+        margin:4vh 0% ;
+        border: none;
+        background-color: rgba(0, 0, 0, 0.8);
+        color: white;
+        padding: 0 5px;
+        outline: none;
+    }
+    main #sec4 #form_id form input:hover{
+        border-top: 2px solid white ;
+        border-left: 2px solid white;
+        border-radius: 10px 10px 0px 10px;
+    }
+    input[type="text"],[type="email"],[type="number"],[type="password"],[type="submit"],[type="reset"]{
+        font-size: large;
+        font-weight: bolder;
+    }
+    input[type="number"]{
+        -moz-appearance: textfield;
+    }
+    main #sec4 #form_id form .input_field{
+        width: 41%;
+        height: 8vh;
+    }
+    main #sec4 #form_id form .btn_field{
+        width: 30%;
+        cursor: pointer;
+    }
+    main #sec4 #form_id form .btn_field:hover{
+        border: 1px solid white;
+        border-radius: 0px;
+    }
+}
