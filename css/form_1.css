@@ -13,10 +13,102 @@ main .container{
     border: 1px solid;
 }
 main #container1{
-    /* background-color: rgba(180, 0, 0, 0.4); */
+    background-image: url("./assets/sea_water2.jpg");
+    overflow: hidden;
+    background-repeat: no-repeat;
+    background-size: cover;
     position: absolute;
     z-index: -1;
 }
+main #container1 .inner_cont1{
+    width: 100%;
+    height: 20vh;
+    display: flex;
+}
+main #container1 #inner_container1{
+    justify-content: right;
+}
+main #container1 #inner_container2{
+    justify-content: left;
+}
+main #container1 #inner_container3{
+    justify-content: right;
+}
+main #container1 #inner_container4{
+    justify-content: right;
+}
+main #container1 #inner_container5{
+    justify-content: left;
+}
+main #container1 .inner_cont1 img{
+    width: 150px;
+    height: 15vh;
+    margin: 2.5vh -150px 2.5vh;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+    animation-timing-function: linear;
+    animation-duration: 15s;
+}
+main #container1 #inner_container1 img{
+    animation-name: move_fish1;
+}
+main #container1 #inner_container2 img{
+    animation-name: move_fish2;
+    animation-delay: 500ms;
+
+}
+main #container1 #inner_container3 img{
+    animation-name: move_fish3;
+    animation-delay: 3000ms;
+}
+main #container1 #inner_container4 img{
+    animation-name: move_fish4;
+    animation-delay: 8000ms;
+}
+main #container1 #inner_container5 img{
+    animation-name: move_fish5;
+    animation-delay: 6000ms;
+}
+@keyframes move_fish1{
+    form{
+        transform: translateX(0px);
+    }
+    to{
+        transform: translateX(-1000%);
+    }
+}
+@keyframes move_fish2{
+    form{
+        transform: translateX(0px);
+    }
+    to{
+        transform: translateX(1000%);
+    }
+}
+@keyframes move_fish3{
+    form{
+        transform: translateX(0px);
+    }
+    to{
+        transform: translateX(-1000%);
+    }
+}
+@keyframes move_fish4{
+    form{
+        transform: translateX(0px);
+    }
+    to{
+        transform: translateX(-1000%);
+    }
+}
+@keyframes move_fish5{
+    form{
+        transform: translateX(0px);
+    }
+    to{
+        transform: translateX(1000%);
+    }
+}
 main #container2{
-    background-color: rgba(0, 0, 0, 0.6);
+    background-color: rgba(0, 0, 50, 0.6);
 }
