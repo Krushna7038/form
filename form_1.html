@@ -26,11 +26,11 @@
             </div>
         </div>
         <div class="container" id="container2">
-            <form action="" method="post">
+            <form action="" name="myForm" oninput="return validation()" method="post">
                 <div class="input_1" id="input1">
                     <label for="">Enter full name <b style="color: red;">*</b></label>
-                    <input type="text" name="" id="">
-                    <span></span>
+                    <input type="text" name="username" id="user_name">
+                    <span id="fullname"></span>
                 </div>
                 <div class="input_1" id="input2">
                     <label for="">Enter working email address <b style="color: red;">*</b></label>
