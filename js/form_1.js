@@ -2,6 +2,8 @@ let clear_name = document.getElementById("fullname");
 let name_id = document.getElementById("user_name");
 let clear_email = document.getElementById("emailid");
 let email_id = document.getElementById("user_email");
+let clear_mobile = document.getElementById("mobileid");
+let mobile_id = document.getElementById("user_contact");
 
 function clearNameErrors() {
     clear_name.innerHTML = "";
@@ -13,13 +15,21 @@ function clearEmailErrors() {
     email_id.style.border = "2px solid green";
 }
 
+function clearContactErrors() {
+    clear_mobile.innerHTML = "";
+    mobile_id.style.border = "2px solid green";
+}
+
 function validation() {
     var name_format = /^[A-Za-z" "]+$/;
     var email_format = /^[a-z_0-9.]{3,}@['gmail']{5,}[.]{1}['com']{3}$/;
+    var mobile_format = /^[0-9]{10}$/;
 
     var returnVal = true;
     clearNameErrors();
     clearEmailErrors();
+    clearContactErrors();
+
     
                     // name validation
     let name_value = document.forms['myForm']["username"].value;
@@ -55,6 +65,22 @@ function validation() {
         clear_email.innerHTML = "Please enter valid email.";
         clear_email.style.color = "red";
         email_id.style.border = "2px solid red";
+        returnVal = false;
+    }
+
+                        // mobile number validation
+    let contact_value = document.forms['myForm']["usercontact"].value;
+    if (contact_value.length<1) {
+        clear_mobile.innerHTML = "Only digits are allowed.";
+        clear_mobile.style.color = "red";
+        mobile_id.style.border = "2px solid red";
+        returnVal = false;
+    }else if(contact_value.match(mobile_format)){
+        returnVal;
+    } else {
+        clear_mobile.innerHTML = "Enter valid mobile number.";
+        clear_mobile.style.color = "red";
+        mobile_id.style.border = "2px solid red";
         returnVal = false;
     }
 
