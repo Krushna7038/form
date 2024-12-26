@@ -1,34 +1,61 @@
 let clear_name = document.getElementById("fullname");
 let name_id = document.getElementById("user_name");
-function clearErrors() {
+let clear_email = document.getElementById("emailid");
+let email_id = document.getElementById("user_email");
+
+function clearNameErrors() {
     clear_name.innerHTML = "";
-    name_id.style.border = "1px solid green";
+    name_id.style.border = "2px solid green";
+}
+
+function clearEmailErrors() {
+    clear_email.innerHTML = "";
+    email_id.style.border = "2px solid green";
 }
 
 function validation() {
     var name_format = /^[A-Za-z" "]+$/;
+    var email_format = /^[a-z_0-9.]{3,}@['gmail']{5,}[.]{1}['com']{3}$/;
 
     var returnVal = true;
-    clearErrors();
-
+    clearNameErrors();
+    clearEmailErrors();
+    
+                    // name validation
     let name_value = document.forms['myForm']["username"].value;
     if (name_value.length<1) {
         clear_name.innerHTML = "Name field can not be empty.";
         clear_name.style.color = "red";
-        name_id.style.border = "1px solid red";
+        name_id.style.border = "2px solid red";
         returnVal = false;
     }else if(name_value.length<10 || name_value.lengh>20){
         clear_name.innerHTML = "Please enter full name.";
         clear_name.style.color = "red";
-        name_id.style.border = "1px solid red";
+        name_id.style.border = "2px solid red";
         returnVal = false;
-    } 
-    else if(name_value.match(name_format)) {
+    }else if(name_value.match(name_format)) {
         returnVal;
     }else{
         clear_name.innerHTML = "Please enter valid name.";
         clear_name.style.color = "red";
-        name_id.style.border = "1px solid red";
+        name_id.style.border = "2px solid red";
         returnVal = false;
     }
+
+                        //email validation
+    let email_value = document.forms['myForm']["useremail"].value;
+    if (email_value.length<1) {
+        clear_email.innerHTML = "Email field can not be empty.";
+        clear_email.style.color = "red";
+        email_id.style.border = "2px solid red";
+        returnVal = false;
+    }else if(email_value.match(email_format)){
+        returnVal;
+    } else {
+        clear_email.innerHTML = "Please enter valid email.";
+        clear_email.style.color = "red";
+        email_id.style.border = "2px solid red";
+        returnVal = false;
+    }
+
 }
