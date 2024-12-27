@@ -6,6 +6,8 @@ let clear_mobile = document.getElementById("mobileid");
 let mobile_id = document.getElementById("user_contact");
 let clear_address = document.getElementById("addressid");
 let address_id = document.getElementById("user_address");
+let clear_aadhar = document.getElementById("aadharid");
+let aadhar_id = document.getElementById("user_aadhar");
 
 function clearNameErrors() {
     clear_name.innerHTML = "";
@@ -27,17 +29,24 @@ function clearAddressErrors(){
     address_id.style.border = "2px solid green";
 }
 
+function clearAadharErrors() {
+    clear_aadhar.innerHTML = "";
+    aadhar_id.style.border = "2px solid green";
+}
+
 function validation() {
     var name_format = /^[A-Za-z" "]+$/;
     var email_format = /^[a-z_0-9.]{3,}@['gmail']{5,}[.]{1}['com']{3}$/;
     var mobile_format = /^[0-9]{10}$/;
     var address_format = /^[A-Za-z0-9" "]+$/;
+    var aadhar_format = /^[0-9]{12}$/;
 
     var returnVal = true;
     clearNameErrors();
     clearEmailErrors();
     clearContactErrors();
     clearAddressErrors();
+    clearAadharErrors();
 
     
                     // name validation
@@ -101,7 +110,7 @@ function validation() {
         address_id.style.border = "2px solid red";
         returnVal = false;
     }else if(address_value.length<40){
-        clear_address.innerHTML = "Minimum 20 characters are required.";
+        clear_address.innerHTML = "Minimum 40 characters are required.";
         clear_address.style.color = "red";
         address_id.style.border = "2px solid red";
         returnVal = false;
@@ -114,4 +123,19 @@ function validation() {
         returnVal = false;
     }
 
+                        // Aadhar validation
+    let aadhar_value = document.forms['myForm']["useraadhar"].value;
+    if (aadhar_value.length<1) {
+        clear_aadhar.innerHTML = "Aadhar field can not be empty";
+        clear_aadhar.style.color = "red";
+        aadhar_id.style.border = "2px solid red";
+        returnVal = false;
+    }else if(aadhar_value.match(aadhar_format)){
+        returnVal;
+    } else {
+        clear_aadhar.innerHTML = "Enter valid aadhar number";
+        clear_aadhar.style.color = "red";
+        aadhar_id.style.border = "2px solid red";
+        returnVal = false;
+    }
 }
