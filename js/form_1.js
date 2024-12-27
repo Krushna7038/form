@@ -4,6 +4,8 @@ let clear_email = document.getElementById("emailid");
 let email_id = document.getElementById("user_email");
 let clear_mobile = document.getElementById("mobileid");
 let mobile_id = document.getElementById("user_contact");
+let clear_address = document.getElementById("addressid");
+let address_id = document.getElementById("user_address");
 
 function clearNameErrors() {
     clear_name.innerHTML = "";
@@ -20,15 +22,22 @@ function clearContactErrors() {
     mobile_id.style.border = "2px solid green";
 }
 
+function clearAddressErrors(){
+    clear_address.innerHTML = "";
+    address_id.style.border = "2px solid green";
+}
+
 function validation() {
     var name_format = /^[A-Za-z" "]+$/;
     var email_format = /^[a-z_0-9.]{3,}@['gmail']{5,}[.]{1}['com']{3}$/;
     var mobile_format = /^[0-9]{10}$/;
+    var address_format = /^[A-Za-z0-9" "]+$/;
 
     var returnVal = true;
     clearNameErrors();
     clearEmailErrors();
     clearContactErrors();
+    clearAddressErrors();
 
     
                     // name validation
@@ -81,6 +90,27 @@ function validation() {
         clear_mobile.innerHTML = "Enter valid mobile number.";
         clear_mobile.style.color = "red";
         mobile_id.style.border = "2px solid red";
+        returnVal = false;
+    }
+
+                        // Address validation
+    let address_value = document.forms['myForm']["useraddress"].value;
+    if (address_value.length<1) {
+        clear_address.innerHTML = "Address field can not be empty";
+        clear_address.style.color = "red";
+        address_id.style.border = "2px solid red";
+        returnVal = false;
+    }else if(address_value.length<40){
+        clear_address.innerHTML = "Minimum 20 characters are required.";
+        clear_address.style.color = "red";
+        address_id.style.border = "2px solid red";
+        returnVal = false;
+    }else if(address_value.match(address_format)){
+        returnVal;
+    } else {
+        clear_address.innerHTML = "Enter valid address.";
+        clear_address.style.color = "red";
+        address_id.style.border = "2px solid red";
         returnVal = false;
     }
 
