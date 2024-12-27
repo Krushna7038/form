@@ -8,6 +8,10 @@ let clear_address = document.getElementById("addressid");
 let address_id = document.getElementById("user_address");
 let clear_aadhar = document.getElementById("aadharid");
 let aadhar_id = document.getElementById("user_aadhar");
+let clear_password1 = document.getElementById("passwordid1");
+let password_id1 = document.getElementById("user_password1");
+let clear_password2 = document.getElementById("passwordid2");
+let password_id2 = document.getElementById("user_password2");
 
 function clearNameErrors() {
     clear_name.innerHTML = "";
@@ -34,12 +38,23 @@ function clearAadharErrors() {
     aadhar_id.style.border = "2px solid green";
 }
 
+function clearPassword1Errors() {
+    clear_password1.innerHTML = "";
+    password_id1.style.border = "2px solid green";
+}
+
+function clearPassword2Errors() {
+    clear_password2.innerHTML = "";
+    password_id2.style.border = "2px solid green";
+}
+
 function validation() {
     var name_format = /^[A-Za-z" "]+$/;
     var email_format = /^[a-z_0-9.]{3,}@['gmail']{5,}[.]{1}['com']{3}$/;
     var mobile_format = /^[0-9]{10}$/;
     var address_format = /^[A-Za-z0-9" "]+$/;
     var aadhar_format = /^[0-9]{12}$/;
+    var password_format = /^[A-Za-z_0-9_@#$%&*]+$/;
 
     var returnVal = true;
     clearNameErrors();
@@ -47,6 +62,8 @@ function validation() {
     clearContactErrors();
     clearAddressErrors();
     clearAadharErrors();
+    clearPassword1Errors();
+    clearPassword2Errors();
 
     
                     // name validation
@@ -136,6 +153,37 @@ function validation() {
         clear_aadhar.innerHTML = "Enter valid aadhar number";
         clear_aadhar.style.color = "red";
         aadhar_id.style.border = "2px solid red";
+        returnVal = false;
+    }
+
+                    // Password validation
+    let password1_value = document.forms['myForm']["userpassword1"].value;
+    if (password1_value.length<1) {
+        clear_password1.innerHTML = "Password field can not be empty";
+        clear_password1.style.color = "red";
+        password_id1.style.border = "2px solid red";
+        returnVal = false;
+    }else if(password1_value.length<8){
+        clear_password1.innerHTML = "Minimum 8 characters are required.";
+        clear_password1.style.color = "red";
+        password_id1.style.border = "2px solid red";
+        returnVal = false;
+    }else if(password1_value.match(password_format)){
+        returnVal;
+    } else {
+        clear_password1.innerHTML = "Password is not strong.<br>Password should contain letters,digits and special symbols.";
+        clear_password1.style.color = "red";
+        password_id1.style.border = "2px solid red";
+        returnVal = false;
+    }
+
+    let password2_value = document.forms['myForm']["userpassword2"].value;
+    if (password2_value == password1_value) {
+        returnVal;
+    } else {
+        clear_password2.innerHTML = "Password is not matching";
+        clear_password2.style.color = "red";
+        password_id2.style.border = "2px solid red";
         returnVal = false;
     }
 }
