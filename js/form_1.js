@@ -1,3 +1,4 @@
+var finalReturnVal;
 let clear_name = document.getElementById("fullname");
 let name_id = document.getElementById("user_name");
 let clear_email = document.getElementById("emailid");
@@ -73,7 +74,7 @@ function validation() {
         clear_name.style.color = "red";
         name_id.style.border = "2px solid red";
         returnVal = false;
-    }else if(name_value.length<10 || name_value.lengh>20){
+    }else if(name_value.length<10 || name_value.length>20){
         clear_name.innerHTML = "Please enter full name.";
         clear_name.style.color = "red";
         name_id.style.border = "2px solid red";
@@ -177,13 +178,28 @@ function validation() {
         returnVal = false;
     }
 
+                        // Confirm password
     let password2_value = document.forms['myForm']["userpassword2"].value;
-    if (password2_value == password1_value) {
+    if(password2_value.length<1){
+        clear_password2.innerHTML = "Password field can not be empty.";
+        clear_password2.style.color = "red";
+        password_id2.style.border = "2px solid red";
+        returnVal = false;
+    } else if(password2_value == password1_value) {
         returnVal;
     } else {
         clear_password2.innerHTML = "Password is not matching";
         clear_password2.style.color = "red";
         password_id2.style.border = "2px solid red";
         returnVal = false;
+    }
+    finalReturnVal = returnVal;
+}
+
+function finalValidation() {
+    if (finalReturnVal) {
+        alert("Your form is summmited.");
+    } else {
+        alert("Please enter valid data.");
     }
 }

@@ -26,7 +26,7 @@
             </div>
         </div>
         <div class="container" id="container2">
-            <form action="" name="myForm" oninput="return validation()" method="post">
+            <form action="" name="myForm" oninput="return validation()" onsubmit="finalValidation()">
                 <div class="input_1" id="input1">
                     <label for="">Enter full name <b style="color: red;">*</b></label>
                     <input type="text" name="username" id="user_name">
@@ -57,7 +57,7 @@
                         <input type="radio" name="gender" id="">
                         <label for="">Other</label>
                     </div>
-                    <span></span>
+                    <span id="genderid"></span>
                 </div>
                 <div class="input_1" id="input6">
                     <label for="">Enter aadhar number <b style="color: red;">*</b></label>
