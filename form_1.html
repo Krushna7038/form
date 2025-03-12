@@ -26,6 +26,10 @@
             </div>
         </div>
         <div class="container" id="container2">
+            <div class="incont" id="incont">
+                <a href="index.html">previous</a>
+                <a href="">next</a>
+            </div>
             <form action="" name="myForm" oninput="return validation()" onsubmit="finalValidation()">
                 <div class="input_1" id="input1">
                     <label for="">Enter full name <b style="color: red;">*</b></label>
@@ -76,7 +80,7 @@
                 </div>
                 <div class="input_1" id="input9">
                     <input type="submit" id="submit" value="SUBMIT">
-                    <input type="reset" id="reset" value="RESET">
+                    <input type="reset" id="reset" value="RESET" onclick="resetInputForm()">
                 </div>
             </form>
         </div>

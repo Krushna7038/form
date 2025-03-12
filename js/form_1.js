@@ -203,3 +203,34 @@ function finalValidation() {
         alert("Please enter valid data.");
     }
 }
+
+function resetInputForm() {
+    clear_name.innerHTML = "";
+    clear_name.style.color = "none";
+    name_id.style.border = "none";
+
+    clear_email.innerHTML = "";
+    clear_email.style.color = "none";
+    email_id.style.border = "none";
+
+    clear_mobile.innerHTML = "";
+    clear_mobile.style.color = "none";
+    mobile_id.style.border = "none";
+
+    clear_address.innerHTML = "";
+    clear_address.style.color = "none";
+    address_id.style.border = "none";
+
+    clear_aadhar.innerHTML = "";
+    clear_aadhar.style.color = "none";
+    aadhar_id.style.border = "none";
+
+    clear_password1.innerHTML = "";
+    clear_password1.style.color = "none";
+    password_id1.style.border = "none";
+
+    clear_password2.innerHTML = "";
+    clear_password2.style.color = "none";
+    password_id2.style.border = "none";
+    
+}
