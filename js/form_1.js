@@ -234,3 +234,22 @@ function resetInputForm() {
     password_id2.style.border = "none";
     
 }
+
+let changeForm = document.getElementsByClassName("container");
+// let changeForm2 = document.getElementById("container3");
+let count = 0;
+function goBack() {
+    if (count>0) {
+        count--;
+    }
+    changeForm[1].style.display = "block";
+    changeForm[2].style.display = "none";
+}
+
+function goNext() {
+    if (count<3) {
+        count++;
+    }
+    changeForm[1].style.display = "none";
+    changeForm[2].style.display = "block";
+}

@@ -109,11 +109,7 @@ main #container1 #inner_container5 img{
         transform: translateX(1000%);
     }
 }
-main #container2{
-    background-color: rgba(0, 0, 40, 0.5);
-    border: 1px solid transparent;
-}
-main #container2 .incont{
+main .incont{
     width: 100%;
     height: 4vh;
     display: flex;
@@ -122,12 +118,33 @@ main #container2 .incont{
     align-items: center;
     padding: 0.5vh 20px;
 }
-main #container2 .incont a{
+main .incont a{
     color: black;
     text-decoration: none;
     text-transform: uppercase;
     font-weight: bolder;
     font-size: 20px;
+}
+main .incont #incont1{
+    width: 200px;
+    height: 4vh;
+    display: flex;
+    justify-content: space-between;
+}
+main .incont #incont1 p{
+    color:crimson;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 4vh;
+    cursor: pointer;
+}
+
+                        /* form 1 */
+main #container2{
+    height: 96vh;
+    background-color: rgba(0, 0, 40, 0.5);
+    border: 1px solid transparent;
+    position: absolute;
 }
 main #container2 form{
     width: 50%;
@@ -173,6 +190,92 @@ main #container2 form #input9 input{
     width: 30%;
     height: 6vh;
     border: 1px solid white;
+}
+input[type="number"]{
+    appearance: textfield;
+}
+
+                /* form 2 */
+main #container3{
+    height: 96vh;
+    background-color: rgba(0, 0, 40, 0.5);
+    border: 1px solid transparent;
+    z-index: -1;
+    display: none;
+}
+main #container3 form{
+    width: 60%;
+    height: 80vh;
+    margin: 10vh auto;
+    padding: 2vh 1%;
+    border-radius: 20px;
+    background-color: rgba(0,0,0, 0.6);
+    overflow-y: scroll;
+    scrollbar-width: none;
+}
+main #container3 form .input_21{
+    width: 100%;
+    padding: 0.5vh 1%;
+    color: white;
+}
+main #container3 form .input_21 input{
+    background-color: rgba(0,0,0, 0.5);
+}
+main #container3 form .input_21 input{
+    width: 100%;
+    height: 5vh;
+    outline: none;
+    color: white;
+    padding: 0vh 5px;
+    border: none;
+}
+main #container3 form #input21 #name_input{
+    display: flex;
+    justify-content: space-between;
+}
+main #container3 form #input21 #first_name{
+    width: 49%;
+}
+main #container3 form #input21 #last_name{
+    width: 49%;
+}
+main #container3 form #input23 #grade{
+    width: 100%;
+    height: 5vh;
+    background-color: rgba(0,0,0, 0.5);
+    outline: none;
+    padding: 0vh 5px;
+    border: none;
+    color: white
+}
+main #container3 form #input25 #size{
+    width: 100%;
+    height: 5vh;
+    background-color: rgba(0,0,0, 0.5);
+    outline: none;
+    padding: 0vh 5px;
+    border: none;
+    color: white
+}
+main #container3 form #input26 #name_input{
+    display: flex;
+    justify-content: space-between;
+}
+main #container3 form #input26 #first_name{
+    width: 49%;
+}
+main #container3 form #input26 #last_name{
+    width: 49%;
+}
+
+main #container3 form #input28{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+main #container3 form #input28 input{
+    width: 30%;
+    height: 6vh;
 }
 input[type="number"]{
     appearance: textfield;
