@@ -131,10 +131,11 @@ main .incont #incont1{
     display: flex;
     justify-content: space-between;
 }
-main .incont #incont1 p{
+main .incont #incont1 p img{
     color:crimson;
     font-weight: bold;
-    font-size: 20px;
+    width: 25px;
+    height: 25px;
     line-height: 4vh;
     cursor: pointer;
 }
