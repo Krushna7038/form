@@ -92,7 +92,7 @@
 
                                   <!-- form 2 -->
         <div class="container" id="container3"> 
-            <form action="" name="myForm" oninput="return validation()" onsubmit="finalValidation()">
+            <form action="" name="myForm">
                 <h2 style="color: lightgoldenrodyellow; text-align: center;">Grade Volleyball Registration Form</h2>
                 <div class="input_21" id="input21">
                     <label for="">Participant Name <b style="color: red;">*</b></label><br>
@@ -110,7 +110,7 @@
                 <div class="input_21" id="input23">
                     <label for="">Grade <b style="color: red;">*</b></label>
                     <select name="grade" id="grade">
-                        <option value="grade">please select</option>
+                        <option value="grade" disabled selected>please select</option>
                         <option value="a">A</option>
                         <option value="b">B</option>
                         <option value="c">C</option>
@@ -125,7 +125,7 @@
                 <div class="input_21" id="input25">
                     <label for="">Shirt Size <b style="color: red;">*</b></label>
                     <select name="size" id="size">
-                        <option value="grade">please select</option>
+                        <option value="s_size" disabled selected>please select</option>
                         <option value="xs">XS</option>
                         <option value="s">S</option>
                         <option value="m">M</option>
@@ -150,7 +150,7 @@
                 
                 <div class="input_21" id="input28">
                     <input type="submit" id="submit" value="SUBMIT">
-                    <input type="reset" id="reset" value="RESET" onclick="resetInputForm()">
+                    <input type="reset" id="reset" value="RESET">
                 </div>
             </form>
         </div>

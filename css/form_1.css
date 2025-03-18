@@ -47,7 +47,7 @@ main #container1 .inner_cont1 img{
     animation-iteration-count: infinite;
     animation-direction: normal;
     animation-timing-function: linear;
-    animation-duration: 15s;
+    animation-duration: 18s;
 }
 main #container1 #inner_container1 img{
     animation-name: move_fish1;
@@ -74,7 +74,7 @@ main #container1 #inner_container5 img{
         transform: translateX(0px);
     }
     to{
-        transform: translateX(-1000%);
+        transform: translateX(-1100%);
     }
 }
 @keyframes move_fish2{
@@ -82,7 +82,7 @@ main #container1 #inner_container5 img{
         transform: translateX(0px);
     }
     to{
-        transform: translateX(1000%);
+        transform: translateX(1100%);
     }
 }
 @keyframes move_fish3{
@@ -90,7 +90,7 @@ main #container1 #inner_container5 img{
         transform: translateX(0px);
     }
     to{
-        transform: translateX(-1000%);
+        transform: translateX(-1100%);
     }
 }
 @keyframes move_fish4{
@@ -98,7 +98,7 @@ main #container1 #inner_container5 img{
         transform: translateX(0px);
     }
     to{
-        transform: translateX(-1000%);
+        transform: translateX(-1100%);
     }
 }
 @keyframes move_fish5{
@@ -106,7 +106,7 @@ main #container1 #inner_container5 img{
         transform: translateX(0px);
     }
     to{
-        transform: translateX(1000%);
+        transform: translateX(1100%);
     }
 }
 main .incont{
@@ -219,15 +219,13 @@ main #container3 form .input_21{
     color: white;
 }
 main #container3 form .input_21 input{
-    background-color: rgba(0,0,0, 0.5);
-}
-main #container3 form .input_21 input{
     width: 100%;
     height: 5vh;
     outline: none;
     color: white;
     padding: 0vh 5px;
     border: none;
+    background-color: rgba(100,90,90, 0.8);
 }
 main #container3 form #input21 #name_input{
     display: flex;
@@ -242,7 +240,7 @@ main #container3 form #input21 #last_name{
 main #container3 form #input23 #grade{
     width: 100%;
     height: 5vh;
-    background-color: rgba(0,0,0, 0.5);
+    background-color: rgba(100,90,90, 0.8);
     outline: none;
     padding: 0vh 5px;
     border: none;
@@ -251,7 +249,7 @@ main #container3 form #input23 #grade{
 main #container3 form #input25 #size{
     width: 100%;
     height: 5vh;
-    background-color: rgba(0,0,0, 0.5);
+    background-color: rgba(100,90,90, 0.8);
     outline: none;
     padding: 0vh 5px;
     border: none;
