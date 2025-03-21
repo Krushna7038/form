@@ -236,20 +236,32 @@ function resetInputForm() {
 }
 
 let changeForm = document.getElementsByClassName("container");
-// let changeForm2 = document.getElementById("container3");
-let count = 0;
+let count = 1;
 function goBack() {
-    if (count>0) {
+    if (count>1) {
         count--;
     }
-    changeForm[1].style.display = "block";
-    changeForm[2].style.display = "none";
+    // changeForm[1].style.display = "block";
+    // changeForm[2].style.display = "none";
+
+    for (let index = 1; index < 4; index++) {
+        if (index == count) {
+            changeForm[count].style.display = "block";
+        }
+        changeForm[index].style.display = "none";    
+        changeForm[count].style.display = "block";    
+    }
 }
 
 function goNext() {
     if (count<3) {
         count++;
     }
-    changeForm[1].style.display = "none";
-    changeForm[2].style.display = "block";
+    for (let index = 1; index < 4; index++) {
+        if (index == count) {
+            changeForm[count].style.display = "block";
+        }
+        changeForm[index].style.display = "none";
+        changeForm[count].style.display = "block";        
+    }
 }
